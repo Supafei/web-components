@@ -3,7 +3,4 @@ title: index
 layout: "../layouts/Layout.astro"
 ---
 
-# Hello world 
-
-## Section 1
-## Section 2
+bienvenue à ICJLAB

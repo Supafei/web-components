@@ -1,7 +1,10 @@
 ---
 import Navbar from "../components/navbar.astro"
+import Header from "../components/header.astro"
 const {frontmatter} = Astro.props
 ---
+
+
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
@@ -12,6 +15,7 @@ const {frontmatter} = Astro.props
 	</head>
 	<body>
 		<h1>Web Components @ IJCLAB</h1>
+		<Header></Header>
 		<Navbar>
         </Navbar>
         <slot/>

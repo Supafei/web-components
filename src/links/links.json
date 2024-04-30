@@ -1,0 +1,21 @@
+[
+{
+    "id": 1,
+    "url" : "/",
+    "title" : "Accueil",
+    "sublink": {
+        "value":"sub-link1",
+        "value2":"sub-link2"
+    }
+},
+{
+    "id": 2,
+    "url" : "/about",
+    "title" : "A Propos"
+},
+{
+    "id": 3,
+    "url" : "/contact",
+    "title" : "Contact"
+}
+]

@@ -1,13 +1,31 @@
 ---
-const linksNav = ['item 1','item 2 ','item 3 ','item 4','item 5']
+import links from "../links/links.json"
+const linksNav = links
+
 ---
+<!DOCTYPE html>
+<html lang="fr">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <title>Web-components Navbar</title>
+</head>
 
-
-<nav class="bg-blue-500">
+<nav x-data="{ open: false }" class="bg-blue-500">
     <ul class="flex justify-center p-4">
-        {linksNav.map((data) => <li class="mx-4">
-            <a href="#" class="text-white hover:text-yellow-700">{data}</a>
+        {linksNav.map((data) => <li class="mx-4" >
+            <button @mouseover="open = true" href={`${data.url}`} class="text-white hover:text-yellow-700">{data.title}</button>
         </li>)}
     </ul>
-</nav>
+    <div class="absolute mt-4 p-6 left-1/2 transform -translate-x-1/2  w-60 bg-gray-200 border-2 border-gray-300" x-show = "open" @click.away= "open = false">
+        <ul class="p-2">
+            <li><a href="/posts/post1"> Post 1</a></li>
+            <li><a href="#"> Option 2</a></li>
+            <li><a href="#"> Option 3</a></li>
+            <li><a href="#"> Option 4</a></li>
+        </ul>
+    </div>
+
+</nav>  
